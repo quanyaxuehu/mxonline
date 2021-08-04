@@ -22,7 +22,7 @@ from users.views import user_login
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
-    #url('^$',TemplateView.as_view(template_name = "index.html"),name = "index"),
+    url('^$',TemplateView.as_view(template_name = "index.html"),name = "index"),
     path('user_login/',user_login,name='user_login')
     #url('^login/&',TemplateView.as_view(template_name = "login.html"),name='login')
 ]
