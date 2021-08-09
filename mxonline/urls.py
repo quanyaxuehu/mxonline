@@ -18,11 +18,11 @@ from django.conf.urls import url
 from django.views.generic import TemplateView
 import xadmin
 
-from users.views import user_login
+from users.views import LoginView
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     url('^$',TemplateView.as_view(template_name = "index.html"),name = "index"),
-    path('user_login/',user_login,name='user_login')
+    path('user_login/',LoginView.as_view(),name='user_login')
     #url('^login/&',TemplateView.as_view(template_name = "login.html"),name='login')
 ]
